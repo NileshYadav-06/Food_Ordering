@@ -1,3 +1,23 @@
+Planning of our website!
+/*
+* Header
+* - Logo
+* - Nav Item
+* Body
+* - search
+* - Restraunrent container
+*     -  Restrorent Card
+*          - img
+*          - name of restro, star rating, cuisine, delivery time
+*          - img
+* Footer
+* - Copyright
+* - Links
+* - Address
+* - contact
+
+*/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,38 +1,97 @@
-.App {
+ .App {
+  margin: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.restro-card > h3 {
+  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 10px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-items {
+  padding: 0px 50px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;  
+}
+
+.search-bar{
+  padding: 10px;
+  margin: 10px;
+}
+.input-btn {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 1px;
+  border-radius: 10px; 
+  outline: none;
+}
+.search-btn{
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: yellow;
+  position: relative;
+  margin: -24px;
+  cursor: pointer;
+  
+}
+ .restro-container {
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: center;
+    align-items: center;
+
+} 
+
+.rating {
+  color: green;
+}
+
+.restro-card {
+ padding: 10px;
+  width: 220px;
+  height: 360px;
+  border-radius: 10px; 
+  margin: 5px;
+  border: 2px solid #f0f0f0;
+  
+}
+
+.restro-card:hover {
+  border: 2px solid black ;
+  cursor: pointer;
+}
+
+.res-logo {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+ 
+  
 }
