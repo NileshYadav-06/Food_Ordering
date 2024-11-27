@@ -946,7 +946,71 @@ const restaurantsList= [
         "type": "WEBLINK"
       },
       "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    }
+    },
+    {
+      info: {
+        id: "872634",
+        name: "KFC",
+        cloudinaryImageId:
+          "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/0a394524-ec41-4e42-9b44-a3e4dff3b623_87263.JPG",
+        areaName: "Sigra",
+        costForTwo: "₹400 for two",
+        cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
+        avgRating: 4.3,
+        parentId: "547",
+        sla: {
+          deliveryTime: 31,
+        },
+      },
+    },
+    {
+      info: {
+        id: "87264",
+        name: "Domino's",
+        cloudinaryImageId:
+          "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/0a394524-ec41-4e42-9b44-a3e4dff3b623_87263.JPG",
+        areaName: "Sigra",
+        costForTwo: "₹400 for two",
+        cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
+        avgRating: 3.4,
+        parentId: "547",
+        sla: {
+          deliveryTime: 35,
+        },
+      },
+    },
+    {
+      info: {
+        id: "87265",
+        name: "foodory",
+        cloudinaryImageId:
+          "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/0a394524-ec41-4e42-9b44-a3e4dff3b623_87263.JPG",
+        areaName: "Sigra",
+        costForTwo: "₹400 for two",
+        cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
+        avgRating: 3.9,
+        parentId: "547",
+        sla: {
+          deliveryTime: 25,
+        },
+      },
+    },
+    {
+      info: {
+        id: "87266",
+        name: "foodogy",
+        cloudinaryImageId:
+          "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/0a394524-ec41-4e42-9b44-a3e4dff3b623_87263.JPG",
+        areaName: "Sigra",
+        costForTwo: "₹400 for two",
+        cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
+        avgRating: 4.5,
+        parentId: "547",
+        sla: {
+          deliveryTime: 38,
+        },
+      },
+    },
   ]
  
   export default restaurantsList;

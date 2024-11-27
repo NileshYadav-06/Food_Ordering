@@ -88,3 +88,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# State Variable -
+state are use to maintains our state of components
+
+Note - Whenever a state variable updates (changes) react re-renders the component .
+
+# React Hook
+(Normal JS utility function)\
+- useState() - Superpoweful State variable in React [It is used to create state variable]
+- useEffect() - 
