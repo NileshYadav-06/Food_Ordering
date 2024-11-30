@@ -1,5 +1,6 @@
 import RestrauntCard from "../Components/RestrauntCard";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 // import restaurantsList from "../utils/mockData";
 
@@ -7,7 +8,7 @@ const Body = () => {
   // State variable  - super powerful variable with the use REACT
   const [listOfRestaurants, setListOfRestaurants] = useState([]); // this is also called as array destructuring
 
-  const [searchText, setSearchText] = useState(""); 
+  const [searchText, setSearchText] = useState("");
 
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
@@ -28,7 +29,7 @@ const Body = () => {
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-     
+
     setFilteredRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -86,7 +87,12 @@ const Body = () => {
 
       <div className="restro-container">
         {filteredRestaurants.map((restaurant) => (
-          <RestrauntCard key={restaurant.info.id} resData={restaurant} />
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            <RestrauntCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
