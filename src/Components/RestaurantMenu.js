@@ -6,17 +6,14 @@ import { RestaurantMenu_API } from "../utils/constants";
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
 
- 
-  const{resId} = useParams();
+  const { resId } = useParams();
   console.log(resId);
-  
+
   useEffect(() => {
     fetchMenu();
-  },[]);
+  }, []);
   const fetchMenu = async () => {
-    const data = await fetch(
-     RestaurantMenu_API+resId
-    );
+    const data = await fetch(RestaurantMenu_API + resId);
     const json = await data.json();
     console.log(json);
     setResInfo(json.data);
@@ -28,10 +25,15 @@ const RestaurantMenu = () => {
     resInfo?.cards[2]?.card?.card?.info;
   console.log(name);
 
-  const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+  const itemCardsData =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) => c.card.card.itemCards
+    );
+  console.log(itemCardsData);
+  // const { itemCards } =
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => c.card.card.itemCards)?.card?.card;
 
-  console.log(itemCards);
+  // console.log(itemCards);
 
   return (
     <div className="menu">
@@ -42,13 +44,15 @@ const RestaurantMenu = () => {
       <h3 className="rating">{avgRatingString} stars</h3>
       <h2> Menu</h2>
       <ul>
-        {itemCards.map((item) => (
-          <li key={item.card.info.id}>
-            {item.card.info.name} - {"Rs."}
-
-            {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
-          </li>
-        ))};
+        {itemCardsData.map((item) =>
+          item.card.card.itemCards.map((i) => (
+            <li key={i.card.info.id}>
+              {i.card.info.name} - {"Rs."}
+              {i.card.info.price / 100 || i.card.info.defaultPrice / 100}
+            </li>
+          ))
+        )}
+        ;
       </ul>
     </div>
   );
