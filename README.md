@@ -100,3 +100,5 @@ Note - Whenever a state variable updates (changes) react re-renders the componen
 (Normal JS utility function)\
 - useState() - Superpoweful State variable in React [It is used to create state variable]
 - useEffect() - 
+
+

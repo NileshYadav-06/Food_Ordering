@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-conatiner">
-        <img className="logo" alt="img" src={LOGO_URL} />
+        <img className="logo" alt="logo-img" src={LOGO_URL} />
       </div>
       <div className="nav-items">
         <ul>
@@ -17,16 +17,16 @@ const Header = () => {
             <Link to="/"> Home </Link>
           </li>
           <li>
-            <Link to="/about"> About Us</Link>
+            <Link to="/about"> AboutUs </Link>
           </li>
           <li>
-            <Link to="/contact"> Contact Us</Link>
+            <Link to="/contact"> ContactUs</Link>
           </li>
-          <li>Cart</li>
+          <li><Link to= "/cart"> Cart(0)</Link></li>
           <button
-            className="login"
+            className="loginBtn"
             onClick={() => {
-              btnName === "login" ? setBtnName("logout") : setBtnName("login");
+              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
           >
             {btnName}

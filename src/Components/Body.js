@@ -35,7 +35,7 @@ const Body = () => {
     );
   };
 
-  if (listOfRestaurants.length === 0) {
+  if (listOfRestaurants?.length === 0) {
     return <Shimmer />; // this is called conditional rendering
   }
 
